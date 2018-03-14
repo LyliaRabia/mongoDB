@@ -10,7 +10,7 @@ import org.mongodb.morphia.Morphia;
  * Hello world!
  *
  */
-public class App 
+public class AppMongo
 {
     public static void main( String[] args )
     {
@@ -30,8 +30,8 @@ public class App
         //set address
         p.addAddress(address);
         // Save the POJO
-        ds.save(p);
+       // ds.save(p);
         for (Person e : ds.find(Person.class))
-            System.out.println(e.getName());
+            System.out.println(e.toString());
     }
 }
