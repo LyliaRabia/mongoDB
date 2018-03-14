@@ -1,5 +1,6 @@
-package mongo;
+package mongo.Domain;
 
+import mongo.Domain.Adress;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Embedded;
 import org.mongodb.morphia.annotations.Entity;

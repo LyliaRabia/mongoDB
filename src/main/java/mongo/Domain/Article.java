@@ -1,4 +1,4 @@
-package mongo;
+package mongo.Domain;
 
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
@@ -7,6 +7,7 @@ import org.mongodb.morphia.annotations.Property;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 @Entity("article")
 public class Article {
@@ -16,17 +17,17 @@ public class Article {
     @Property("price")
     private int stars;
     private String name;
-    private Collection<Person> buyrers;
+    private Collection<Person> buyers;
 
     public Article(String name, int stars) {
         this.name = name;
         this.stars = stars;
-        buyrers = new ArrayList<Person>();
+        buyers = new ArrayList<Person>();
     }
     public Article() {
         this.name = "";
         this.stars = 0;
-        buyrers = new ArrayList<Person>();
+        buyers = new ArrayList<Person>();
     }
 
     public ObjectId getId() {
@@ -52,6 +53,27 @@ public class Article {
     public void setName(String name) {
         this.name = name;
     }
+    public String getAllBuyers()
+    {
+        String persons = "";
+        Iterator<Person> personIterator = this.buyers.iterator();
+        while (personIterator.hasNext())
+        {
 
+            persons += personIterator.next().getName()+", ";
+        }
+        return  persons;
+    }
+
+    @Override
+    public String toString() {
+
+        return "Article{" +
+                "id=" + id +
+                ", name=' " + name + '\'' +
+                ", stars= " + stars +
+                ", buyers= [" + this.getAllBuyers() +" ]"+
+                '}';
+    }
 
 }

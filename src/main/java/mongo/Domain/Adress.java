@@ -1,4 +1,4 @@
-package mongo;
+package mongo.Domain;
 
 import org.mongodb.morphia.annotations.Embedded;
 
@@ -55,9 +55,6 @@ public class Adress {
     public void setCountry(String country) {
         this.country = country;
     }
-
-
-
 
 
 }
