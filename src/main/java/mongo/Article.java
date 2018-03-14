@@ -1,14 +1,19 @@
 package mongo;
 
 import org.bson.types.ObjectId;
+import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Id;
+import org.mongodb.morphia.annotations.Property;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
+@Entity("article")
 public class Article {
 
-
+    @Id
     private ObjectId id;
+    @Property("price")
     private int stars;
     private String name;
     private Collection<Person> buyrers;

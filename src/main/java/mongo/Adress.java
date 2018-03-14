@@ -1,11 +1,28 @@
 package mongo;
 
+import org.mongodb.morphia.annotations.Embedded;
+
+@Embedded
 public class Adress {
 
     private String street;
     private String city;
     private String postCode;
     private String country;
+
+    public Adress(String street, String postCode, String city, String country) {
+        this.street = street;
+        this.city = city;
+        this.postCode = postCode;
+        this.country = country;
+    }
+
+    public Adress() {
+        this.street = "";
+        this.city = "";
+        this.postCode = "";
+        this.country = "";
+    }
 
     public String getStreet() {
         return street;
