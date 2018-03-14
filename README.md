@@ -30,9 +30,15 @@ MongoDB est une base de donnée orienté documents. A la différence d'une base 
 
 Question 1 :
 
-Quelles sont les limites d’une base données orientées document ? 
+Quelles sont les limites d’une base de données orientées documents ? 
 
+Les limites d'une base de données orientées documents est d'abord qu'elles ne sont pas adaptées pour les données interconnectées. Ensuite, elles ne sont pas utilisables pour les données non-structurées.
 
 Questions 2 :
 
 Quelles sont les types de données stockés dans Redis, que peut on faire comme types de requêtes ? 
+
+Redis est une base de données NoSQL permettant de stocker des valeurs associées à des clés.
+
+Parmis les requêtes possibles, Redis permet l'ajout, la suppression ou la récupération des valeurs. 
+
