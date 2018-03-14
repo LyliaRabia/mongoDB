@@ -36,6 +36,7 @@ public class AppMongo
         Adress address2 = new Adress("30 kitchen street","65420","kitchen city", "House" );
 
 
+
         person.addAddress(address);
         person.addAddress(address1);
         person.addAddress(address2);
